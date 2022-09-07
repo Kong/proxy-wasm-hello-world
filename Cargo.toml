@@ -1,0 +1,23 @@
+[package]
+name = "proxy-wasm-filter-xml-to-json"
+version = "0.1.0"
+authors = ["Caio Ramos Casimiro <caiorcasimiro@gmail.com>"]
+edition = "2018"
+
+[lib]
+path = "src/filter.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+base64 = "0.13"
+proxy-wasm = "0.1"
+http = "0.2"
+matchit = "0.4"
+url = "2.2"
+log = "0.4"
+serde = { version = "1.0", default-features = false, features = ["rc"] }
+quick-xml = { version = "0.19", features = ["serde"] }
+
+serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
+serde_derive = { version = "1.0", default-features = false }
+serde-tuple-vec-map = { version = "1.0", default-features = false }
