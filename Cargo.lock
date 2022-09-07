@@ -160,7 +160,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "proxy-wasm-filter-xml-to-json"
+name = "proxy-wasm-filter-soap-to-json"
 version = "0.1.0"
 dependencies = [
  "base64",

@@ -20,7 +20,7 @@ fn read(mut reader: &mut Reader<&[u8]>, depth: u64, parse_attributes: bool) -> V
             Ok(Event::Start(ref e)) => {
                 if let Ok(name) = String::from_utf8(e.name().to_vec()) {
                     let child = read(&mut reader, depth + 1, parse_attributes);
-                    let new_name = name.split(':').rev().next().unwrap().to_string().to_lowercase();
+                    let new_name = name.split(':').rev().next().unwrap().to_string();
 
                     debug!("{} children: {:?}", new_name, child);
 
@@ -89,10 +89,6 @@ fn read(mut reader: &mut Reader<&[u8]>, depth: u64, parse_attributes: bool) -> V
     }
 }
 
-/**
- * to_json() will take an input string and attempt to convert it into a form
- * of JSON
- */
 pub fn to_json(xml: &str, parse_attributes: bool) -> Result<Value, Error> {
     let mut reader = Reader::from_str(xml);
     reader.expand_empty_elements(true);
@@ -102,7 +98,7 @@ pub fn to_json(xml: &str, parse_attributes: bool) -> Result<Value, Error> {
 }
 
 pub fn go_to_body(root: &Value) -> Option<&Value> {
-    let envelop = root.get("envelope").unwrap();
+    let envelop = root.get("Envelope").unwrap();
 
-    envelop.get("body")
+    envelop.get("Body")
 }
