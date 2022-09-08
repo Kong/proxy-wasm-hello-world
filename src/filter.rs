@@ -34,17 +34,13 @@ impl HttpContext for HttpBody {
         Action::Continue
     }
 
-    fn on_http_request_body(&mut self, body_size: usize, end_of_stream: bool) -> Action {
-        if !end_of_stream {
-            return Action::Pause;
-        }
-
-        if let Some(body_bytes) = self.get_http_request_body(0, body_size) {
+    fn on_http_response_body(&mut self, body_size: usize, _end_of_stream: bool) -> Action {
+        if let Some(body_bytes) = self.get_http_response_body(0, body_size) {
             let body_str = String::from_utf8(body_bytes).unwrap();
             let value = to_json(&body_str, false).unwrap();
             let body = go_to_body(&value).unwrap();
             let text = serde_json::to_string(&body).unwrap();
-            self.set_http_request_body(0, body_size, &text.into_bytes());
+            self.set_http_response_body(0, body_size, &text.into_bytes());
         }
         Action::Continue
     }
