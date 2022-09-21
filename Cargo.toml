@@ -1,7 +1,7 @@
 [package]
-name = "proxy-wasm-filter-soap-to-json"
+name = "proxy-wasm-rust-filter-header-hello-world"
 version = "0.1.0"
-authors = ["Caio Ramos Casimiro <caiorcasimiro@gmail.com>"]
+authors = ["usrbinkat <usrbinkat@braincraft.io>"]
 edition = "2018"
 
 [lib]

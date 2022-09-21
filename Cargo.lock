@@ -160,7 +160,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "proxy-wasm-filter-soap-to-json"
+name = "proxy-wasm-rust-filter-header-hello-world"
 version = "0.1.0"
 dependencies = [
  "base64",
