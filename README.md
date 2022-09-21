@@ -60,14 +60,13 @@ Dependencies:
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 15
-Date: Wed, 21 Sep 2022 22:04:25 GMT
-Hello: World
+Cowsay: Hello World
+Date: Wed, 21 Sep 2022 22:09:21 GMT
 Powered-By: proxy-wasm
 Server: nginx
 Via: kong/3.0.0.0-enterprise-edition
-X-Kong-Proxy-Latency: 145
+X-Kong-Proxy-Latency: 209
 X-Kong-Upstream-Latency: 0
 
 Hello, World!
-
 ```

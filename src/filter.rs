@@ -55,7 +55,7 @@ impl HttpContext for HttpHeaders {
             Some(path) if path == "/mockbin" => {
                 self.send_http_response(
                     200,
-                    vec![("Hello", "World"), ("Powered-By", "proxy-wasm")],
+                    vec![("Cowsay", "Hello World"), ("Powered-By", "proxy-wasm")],
                     Some(b"Hello, World!\n"),
                 );
                 Action::Pause
