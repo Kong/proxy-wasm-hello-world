@@ -1,5 +1,5 @@
 [package]
-name = "proxy-wasm-rust-filter-header-hello-world"
+name = "proxy-wasm-hello-world"
 version = "0.1.0"
 authors = ["usrbinkat <usrbinkat@braincraft.io>"]
 edition = "2018"
