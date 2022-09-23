@@ -42,16 +42,16 @@ Dependencies:
 <space>
 </space>
 
-2. Clone Wasm Filter repo for: [`proxy_wasm_hello_world`](https://github.com/usrbinkat/proxy-wasm-hello-world)
+2. Clone Wasm Filter repo for: [`proxy_wasm_hello_world`](https://github.com/kong/proxy-wasm-hello-world)
 
     ```bash
-    git clone https://github.com/usrbinkat/proxy-wasm-hello-world wasm
+    git clone https://github.com/kong/proxy-wasm-hello-world wasm
     ```
 
 3. Run [Kong API Gateway](https://docs.konghq.com/gateway/latest/):
 
     ```bash
-    curl -Ls https://get.konghq.com/quickstart | bash -s -- -i kong-gateway-internal -t 3.0.0.0-wasmer \
+    curl -Ls https://get.konghq.com/quickstart | bash -s -- -i incubator -t gateway-wasmer-3.0.0.0 \
       -e "KONG_WASM=on" -e "KONG_WASM_MODULES=/wasm/proxy_wasm_hello_world.wasm" -v $(pwd)/wasm:/wasm
     ```
 
