@@ -15,7 +15,7 @@ The [Wasm System Interface](https://hacks.mozilla.org/2019/03/standardizing-wasi
 
 ## What is [WebAssembly for Proxies](https://github.com/proxy-wasm/spec)?
 
-Wasm extensions depend on a proxy exposing an [embedded Wasm runtime](https://github.com/proxy-wasm/spec/blob/master/docs/WebAssembly-in-Envoy.md#runtimes). First featured in the [Envoy Proxy](https://opensource.googleblog.com/2020/03/webassembly-brings-extensibility-to.html), [Wasm for Proxies](https://github.com/proxy-wasm) defines a standard integration spec to facilitate communication between the proxy host program and  data filter extensions over the Wasi ABI.
+Wasm based packet filter extensions depend on a proxy exposing an [embedded Wasm runtime](https://github.com/proxy-wasm/spec/blob/master/docs/WebAssembly-in-Envoy.md#runtimes). First featured in the [Envoy Proxy](https://opensource.googleblog.com/2020/03/webassembly-brings-extensibility-to.html), [Wasm for Proxies](https://github.com/proxy-wasm) defines a standard integration spec to facilitate communication between the proxy host program and  data filter extensions over the Wasi ABI.
 
 ## Get Started:
 
