@@ -1,6 +1,6 @@
 # Proxy Wasm Hello World
 
-Wasm enables developers to write Wasm packet filters in their [preferred language](https://github.com/proxy-wasm/spec#sdks) and deploy them to various dataplanes.    
+Proxy-Wasm enables developers to write Wasm proxy filters in their [preferred language](https://github.com/proxy-wasm/spec#sdks) and deploy them to various dataplanes.    
     
 ## Benefits
 
@@ -15,7 +15,7 @@ The [Wasm System Interface](https://hacks.mozilla.org/2019/03/standardizing-wasi
 
 ## What is [WebAssembly for Proxies](https://github.com/proxy-wasm/spec)?
 
-Wasm based packet filter extensions depend on a proxy exposing an [embedded Wasm runtime](https://github.com/proxy-wasm/spec/blob/master/docs/WebAssembly-in-Envoy.md#runtimes) interface. First featured in the [Envoy Proxy](https://opensource.googleblog.com/2020/03/webassembly-brings-extensibility-to.html), [Wasm for Proxies](https://github.com/proxy-wasm) defines a standard integration spec to facilitate communication between the proxy host program and  data filter extensions over the Wasi ABI.
+Wasm based proxy filter extensions depend on a proxy exposing an [embedded Wasm runtime](https://github.com/proxy-wasm/spec/blob/master/docs/WebAssembly-in-Envoy.md#runtimes) interface. First featured in the [Envoy Proxy](https://opensource.googleblog.com/2020/03/webassembly-brings-extensibility-to.html), [Wasm for Proxies](https://github.com/proxy-wasm) defines a standard integration spec to facilitate communication between the proxy host program and data filter extensions over the WASI ABI.
 
 ## Get Started:
 
